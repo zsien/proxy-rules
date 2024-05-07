@@ -1,0 +1,75 @@
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 5 * * *'
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/checkout@v4
+        with:
+          ref: release
+          path: release
+
+      - name: Create Loon directory
+        run: |
+          mkdir -p release/Loon
+
+      # China list
+      - name: Checkout dnsmasq-china-list
+        uses: actions/checkout@v4
+        with:
+          repository: felixonmars/dnsmasq-china-list
+          path: dnsmasq-china-list
+          sparse-checkout: |
+            apple.china.conf
+            google.china.conf
+
+      - name: Generate China list files
+        run: |
+          sed -E -e 's|^server=/([^/]+)/114\.114\.114\.114$|DOMAIN-SUFFIX,\1|' dnsmasq-china-list/apple.china.conf > release/Loon/apple-china.list
+          sed -E -e 's|^server=/([^/]+)/114\.114\.114\.114$|DOMAIN-SUFFIX,\1|' dnsmasq-china-list/google.china.conf > release/Loon/google-china.list
+
+      # GFW list
+      - name: Checkout gfwlist2dnsmasq
+        uses: actions/checkout@v4
+        with:
+          repository: cokebar/gfwlist2dnsmasq
+          path: gfwlist2dnsmasq
+
+      - name: Get gfwlist domain list
+        run: |
+          pushd gfwlist2dnsmasq
+          ./gfwlist2dnsmasq.sh -l -o ./gfwlist.txt
+          popd
+
+      - name: Generate GFW list file
+        run: |
+          sed -E -e 's|^|DOMAIN-SUFFIX,|' gfwlist2dnsmasq/gfwlist.txt > release/Loon/gfwlist.list
+
+      # Telegram
+      - name: Generate Telegram list file
+        run: |
+          curl -s https://core.telegram.org/resources/cidr.txt -o telegram-cidr.list
+          sed -E -e 's|^(.*)$|IP-CIDR,\1,no-resolve|' telegram-cidr.list > release/Loon/telegram-ip.list
+          sed -E -e 's|^AS([[:digit:]]+)$|IP-ASN,\1,no-resolve|' telegram-asn.list >> release/Loon/telegram-ip.list
+
+      # Commit and push changes
+      - name: Commit and push changes
+        run: |
+          pushd release
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -A
+          git commit -m "[automated commit] Regenerate files $(date +%Y%m%d%H%M)"
+          git push
+          popd
