@@ -29,14 +29,12 @@ jobs:
         with:
           repository: felixonmars/dnsmasq-china-list
           path: dnsmasq-china-list
-          sparse-checkout: |
-            apple.china.conf
-            google.china.conf
 
       - name: Generate China list files
         run: |
           sed -E -e 's|^server=/([^/]+)/114\.114\.114\.114$|DOMAIN-SUFFIX,\1|' dnsmasq-china-list/apple.china.conf > release/Loon/apple-china.list
           sed -E -e 's|^server=/([^/]+)/114\.114\.114\.114$|DOMAIN-SUFFIX,\1|' dnsmasq-china-list/google.china.conf > release/Loon/google-china.list
+          sed -E -e 's|^server=/([^/]+)/114\.114\.114\.114$|DOMAIN-SUFFIX,\1|' dnsmasq-china-list/accelerated-domains.china.conf > release/Loon/domains-china.list
 
       # GFW list
       - name: Checkout gfwlist2dnsmasq
