@@ -17,8 +17,9 @@ jobs:
           ref: release
           path: release
 
-      - name: Create Loon directory
+      - name: Create directories
         run: |
+          mkdir -p release/raw
           mkdir -p release/Loon
 
       # China list
@@ -30,6 +31,10 @@ jobs:
 
       - name: Generate China list files
         run: |
+          sed -E -e 's|^server=/([^/]+)/114\.114\.114\.114$|\1|' dnsmasq-china-list/apple.china.conf > release/raw/apple-china.list
+          sed -E -e 's|^server=/([^/]+)/114\.114\.114\.114$|\1|' dnsmasq-china-list/google.china.conf > release/raw/google-china.list
+          sed -E -e 's|^server=/([^/]+)/114\.114\.114\.114$|\1|' dnsmasq-china-list/accelerated-domains.china.conf > release/raw/domains-china.list
+
           sed -E -e 's|^server=/([^/]+)/114\.114\.114\.114$|DOMAIN-SUFFIX,\1|' dnsmasq-china-list/apple.china.conf > release/Loon/apple-china.list
           sed -E -e 's|^server=/([^/]+)/114\.114\.114\.114$|DOMAIN-SUFFIX,\1|' dnsmasq-china-list/google.china.conf > release/Loon/google-china.list
           sed -E -e 's|^server=/([^/]+)/114\.114\.114\.114$|DOMAIN-SUFFIX,\1|' dnsmasq-china-list/accelerated-domains.china.conf > release/Loon/domains-china.list
@@ -49,12 +54,17 @@ jobs:
 
       - name: Generate GFW list file
         run: |
+          cp gfwlist2dnsmasq/gfwlist.txt release/raw/gfwlist.list
+
           sed -E -e 's|^|DOMAIN-SUFFIX,|' gfwlist2dnsmasq/gfwlist.txt > release/Loon/gfwlist.list
 
       # Telegram
       - name: Generate Telegram list file
         run: |
           curl -s https://core.telegram.org/resources/cidr.txt -o telegram-cidr.list
+
+          cp telegram-cidr.list release/raw/telegram-cidr.list
+
           sed -E -e 's|^(.*)$|IP-CIDR,\1,no-resolve|' telegram-cidr.list > release/Loon/telegram-ip.list
           sed -E -e 's|^AS([[:digit:]]+)$|IP-ASN,\1,no-resolve|' telegram-asn.list >> release/Loon/telegram-ip.list
 
