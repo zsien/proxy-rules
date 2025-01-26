@@ -2974,7 +2974,6 @@ DOMAIN-SUFFIX,izaobao.us
 DOMAIN-SUFFIX,izles.net
 DOMAIN-SUFFIX,izlesem.org
 DOMAIN-SUFFIX,j.mp
-DOMAIN-SUFFIX,ja.wikipedia.org
 DOMAIN-SUFFIX,jable.tv
 DOMAIN-SUFFIX,jamaat.org
 DOMAIN-SUFFIX,jamestown.org
@@ -5877,6 +5876,8 @@ DOMAIN-SUFFIX,wiki.jqueryui.com
 DOMAIN-SUFFIX,wiki.keso.cn
 DOMAIN-SUFFIX,wiki.oauth.net
 DOMAIN-SUFFIX,wiki.phonegap.com
+DOMAIN-SUFFIX,wikibooks.org
+DOMAIN-SUFFIX,wikidata.org
 DOMAIN-SUFFIX,wikileaks-forum.com
 DOMAIN-SUFFIX,wikileaks.ch
 DOMAIN-SUFFIX,wikileaks.com
@@ -5889,8 +5890,11 @@ DOMAIN-SUFFIX,wikilivres.info
 DOMAIN-SUFFIX,wikimapia.org
 DOMAIN-SUFFIX,wikimedia.org
 DOMAIN-SUFFIX,wikipedia.org
+DOMAIN-SUFFIX,wikiversity.org
+DOMAIN-SUFFIX,wikivoyage.org
 DOMAIN-SUFFIX,wikiwand.com
 DOMAIN-SUFFIX,wikiwiki.jp
+DOMAIN-SUFFIX,wiktionary.org
 DOMAIN-SUFFIX,wildammo.com
 DOMAIN-SUFFIX,williamhill.com
 DOMAIN-SUFFIX,willw.net
@@ -5915,6 +5919,7 @@ DOMAIN-SUFFIX,wjbk.org
 DOMAIN-SUFFIX,wlcnew.jigsy.com
 DOMAIN-SUFFIX,wlx.sowiki.net
 DOMAIN-SUFFIX,wmflabs.org
+DOMAIN-SUFFIX,wmfusercontent.org
 DOMAIN-SUFFIX,wn.com
 DOMAIN-SUFFIX,wnacg.com
 DOMAIN-SUFFIX,wnacg.org
