@@ -51,12 +51,20 @@ jobs:
                 jq -r '.rules[]? | .ip_cidr[]?' "${json_file}" > "${out_file}"
                 expected_key="ip_cidr"
               else
-                jq -r '.rules[]? | .domain_suffix[]?' "${json_file}" > "${out_file}"
-                expected_key="domain_suffix"
+                jq -r '
+                  .rules[]? |
+                  (.domain_suffix[]?),
+                  (.domain[]? | "-." + .)
+                ' "${json_file}" > "${out_file}"
+                expected_keys_json='["domain_suffix","domain"]'
               fi
 
               top_extra_keys="$(jq -r 'objects | keys_unsorted[]? | select(. != "rules" and . != "version")' "${json_file}" | sort -u | paste -sd ',' -)"
-              rule_extra_keys="$(jq -r --arg expected "${expected_key}" '.rules[]? | objects | keys_unsorted[]? | select(. != $expected)' "${json_file}" | sort -u | paste -sd ',' -)"
+              if [ "${kind}" = "geoip" ]; then
+                rule_extra_keys="$(jq -r '.rules[]? | objects | keys_unsorted[]? | select(. != "ip_cidr")' "${json_file}" | sort -u | paste -sd ',' -)"
+              else
+                rule_extra_keys="$(jq -r --argjson expected "${expected_keys_json}" '.rules[]? | objects | keys_unsorted[]? | select((. as $k | $expected | index($k)) | not)' "${json_file}" | sort -u | paste -sd ',' -)"
+              fi
 
               if [ -n "${top_extra_keys}" ]; then
                 echo "::notice file=${json_file}::[${rel_path}] Top-level extra keys: ${top_extra_keys}"
