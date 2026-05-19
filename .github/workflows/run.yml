@@ -55,15 +55,15 @@ jobs:
                 expected_key="domain_suffix"
               fi
 
-              top_extra_keys="$(jq -r 'objects | keys_unsorted[]? | select(. != "rules")' "${json_file}" | sort -u | paste -sd ',' -)"
+              top_extra_keys="$(jq -r 'objects | keys_unsorted[]? | select(. != "rules" and . != "version")' "${json_file}" | sort -u | paste -sd ',' -)"
               rule_extra_keys="$(jq -r --arg expected "${expected_key}" '.rules[]? | objects | keys_unsorted[]? | select(. != $expected)' "${json_file}" | sort -u | paste -sd ',' -)"
 
               if [ -n "${top_extra_keys}" ]; then
-                echo "::notice file=${json_file}::Top-level extra keys: ${top_extra_keys}"
+                echo "::notice file=${json_file}::[${rel_path}] Top-level extra keys: ${top_extra_keys}"
               fi
 
               if [ -n "${rule_extra_keys}" ]; then
-                echo "::notice file=${json_file}::Rule extra keys: ${rule_extra_keys}"
+                echo "::notice file=${json_file}::[${rel_path}] Rule extra keys: ${rule_extra_keys}"
               fi
             done
           done
