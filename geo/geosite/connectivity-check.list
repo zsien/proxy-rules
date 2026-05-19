@@ -9,3 +9,9 @@ networkcheck.kde.org
 ipv6check-http.steamserver.net
 ipv6check-udp.steamserver.net
 test.steampowered.com
+-.ping.archlinux.org
+-.redirect.archlinux.org
+-.connectivitycheck.platform.hihonorcloud.com
+-.connectivitycheck.platform.hicloud.com
+-.connect.rom.miui.com
+-.connectivity-check.ubuntu.com
