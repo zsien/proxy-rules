@@ -43,14 +43,21 @@ jobs:
 
             find "${src_root}" -type f -name '*.json' -print0 | while IFS= read -r -d '' json_file; do
               rel_path="${json_file#${src_root}/}"
-              out_file="${dst_root}/${rel_path%.json}.list"
-
-              mkdir -p "$(dirname "${out_file}")"
+              rel_no_ext="${rel_path%.json}"
 
               if [ "${kind}" = "geoip" ]; then
-                jq -r '.rules[]? | .ip_cidr[]?' "${json_file}" > "${out_file}"
-                expected_key="ip_cidr"
+                out_file_v4="${dst_root}/${rel_no_ext}.ip.list"
+                out_file_v6="${dst_root}/${rel_no_ext}.ip6.list"
+
+                mkdir -p "$(dirname "${out_file_v4}")"
+
+                jq -r '.rules[]? | .ip_cidr[]? | select(type == "string") | select(test(":") | not)' "${json_file}" > "${out_file_v4}"
+                jq -r '.rules[]? | .ip_cidr[]? | select(type == "string") | select(test(":"))' "${json_file}" > "${out_file_v6}"
               else
+                out_file="${dst_root}/${rel_no_ext}.list"
+
+                mkdir -p "$(dirname "${out_file}")"
+
                 jq -r '
                   .rules[]? |
                   (.domain_suffix[]?),
