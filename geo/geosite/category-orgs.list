@@ -13,6 +13,7 @@ w3.org
 who.int
 wi-fi.org
 wto.org
+csis.org
 attestation.app
 grapheneos.app
 grapheneos.ca
@@ -38,7 +39,6 @@ osm.org
 osmfoundation.org
 stateofthemap.com
 stateofthemap.org
-paskoocheh.com
 rolfoundation.org
 rolsociety.org
 ccstatic.org
@@ -53,10 +53,6 @@ f-dro1d.org
 f-droid.com
 f-droid.org
 fdroid.org
-nist.gov
-time.gov
-ppy.sh
-csis.org
 ieee.org
 ieee.tv
 tryengineering.org
@@ -119,6 +115,11 @@ listenbrainz.org
 messybrainz.org
 metabrainz.org
 musicbrainz.org
+nist.gov
+time.gov
+paskoocheh.com
+ppy.sh
+-.csis-prod.s3.amazonaws.com
 -.a.ppy.sh
 -.assets.ppy.sh
 -.c.ppy.sh
@@ -128,4 +129,3 @@ musicbrainz.org
 -.notify.ppy.sh
 -.sentry.ppy.sh
 -.spectator.ppy.sh
--.csis-prod.s3.amazonaws.com
