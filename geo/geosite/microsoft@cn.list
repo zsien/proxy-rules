@@ -35,10 +35,6 @@ powerbi.cn
 sharepoint.cn
 dl.delivery.mp.microsoft.com
 download.windowsupdate.com
-microsoftnews.cn
-msn.cn
-browser.events.data.msn.cn
-xboxlive.cn
 21vbc.com
 21vbluecloud.com
 21vbluecloud.net
@@ -134,6 +130,10 @@ th.bing.com
 microsoftreactor.cn
 microsoftreactor.com.cn
 reactorms.com.cn
+microsoftnews.cn
+msn.cn
+browser.events.data.msn.cn
+xboxlive.cn
 -.b.c2r.ts.cdn.office.net
 -.bg.v4.a.dl.ws.microsoft.com
 -.bg4.v4.a.dl.ws.microsoft.com
@@ -164,6 +164,6 @@ reactorms.com.cn
 -.vz.download.prss.microsoft.com
 -.wscont1.apps.microsoft.com
 -.wscont2.apps.microsoft.com
--.www.microsoft.com
 -.bj1.api.bing.com
 -.emoi-cncdn.bing.com
+-.www.microsoft.com
