@@ -113,6 +113,7 @@ ggpht.cn
 -.www.gstatic.com
 -.www.pxcc.com
 -.redirector.c.play.google.com
+-.firebase-settings.crashlytics.com
 -.pki-goog.l.google.com
 -.c.pki.goog
 -.i.pki.goog
@@ -120,4 +121,3 @@ ggpht.cn
 -.crl.pki.goog
 -.crls.pki.goog
 -.ocsp.pki.goog
--.firebase-settings.crashlytics.com
