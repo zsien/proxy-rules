@@ -1,3 +1,4 @@
+crashlytics.com
 firebase.com
 firebase.io
 firebaseapp.com
@@ -14,4 +15,6 @@ firebaseio.com
 -.firebaselogging.googleapis.com
 -.firebaseperusertopics-pa.googleapis.com
 -.firebaseremoteconfig.googleapis.com
+-.crashlyticsreports-pa.googleapis.com
 -.firebase-settings.crashlytics.com
+-.update.crashlytics.com
