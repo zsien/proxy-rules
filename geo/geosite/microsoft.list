@@ -243,8 +243,8 @@ winhec.net
 yammer.com
 adaptivecards.io
 api-extractor.com
-githubcopilot.com
 npmjs.org
+npmjs.com
 apisof.net
 microsoft.ch
 blazor.net
@@ -297,8 +297,8 @@ vscode.dev
 vscodeedu.app
 vscodeedu.com
 xamarin.com
-npmjs.com
 npm.community
+githubcopilot.com
 thegithubshop.com
 msocsp.com
 microsoftnews.cc
@@ -355,8 +355,6 @@ xboxplayanywhere.com
 xboxservices.com
 xboxstudios.com
 xbx.lv
-asobostudio.com
-flightsimulator.com
 beth.games
 bethesda.net
 bethesdagamestudios.com
@@ -373,6 +371,8 @@ minecraft.net
 minecraftservices.com
 minecraftshop.com
 mojang.com
+asobostudio.com
+flightsimulator.com
 microsoft.be
 aadrm.com
 azure-api.net
@@ -658,8 +658,8 @@ collector.github.com
 -.ocsp.microsoft.com
 -.oneocsp.microsoft.com
 -.www.microsoft.com
--.flightsimulator.azureedge.net
 -.prodforza.blob.core.windows.net
+-.flightsimulator.azureedge.net
 -.azure.microsoft.com
 -.azuremarketplace.microsoft.com
 -.location.microsoft.com
