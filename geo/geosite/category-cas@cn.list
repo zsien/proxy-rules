@@ -1,3 +1,4 @@
+sslcom.cn
 dcocsp.cn
 digicert.cn
 alphassl.com
@@ -10,10 +11,9 @@ oemssl.cn.cdn.cloudflare.net
 sectigochina.com
 sectigochina.com.cdn.cloudflare.net
 trust-provider.cn
-sslcom.cn
--.www.entrust.cn
 -.cdn.globalsigncdn.com.cdn.cloudflare.net
 -.crl.globalsign.net
+-.www.entrust.cn
 -.pki-goog.l.google.com
 -.c.pki.goog
 -.i.pki.goog
