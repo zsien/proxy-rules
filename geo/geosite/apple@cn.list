@@ -36,6 +36,10 @@ livephotos.com.cn
 xn--czrs0t4phtr3a.cn
 xn--fiqs8sxootzz.cn
 xn--ohq11k7pl25iyo8a.cn
+researchkit.cn
+researchkit.com.cn
+swiftui.cn
+swiftui.com.cn
 beats1.cn
 beats1.com.cn
 beats2.com.cn
@@ -50,10 +54,6 @@ icloud-content.com.cn
 icloud.com.cn
 icloud.net.cn
 icloudapple.cn
-researchkit.cn
-researchkit.com.cn
-swiftui.cn
-swiftui.com.cn
 apple-itunes.cn
 itunes-apple.cn
 itunesapple.cn
@@ -233,6 +233,8 @@ itunesradio.com.cn
 -.cdn-cn2.apple-mapkit.com
 -.cdn-cn3.apple-mapkit.com
 -.cdn-cn4.apple-mapkit.com
+-.amp-api.podcasts.apple.com
+-.podcasts.apple.com
 -.amp-api-edge-lb-cn.itunes-apple.com.akadns.net
 -.amp-api-edge-lb.itunes-apple.com.akadns.net
 -.aod-ssl.itunes.apple.com
@@ -293,5 +295,3 @@ itunesradio.com.cn
 -.ocsp2.apple.com
 -.valid.apple.com
 -.valid.origin-apple.com.akadns.net
--.amp-api.podcasts.apple.com
--.podcasts.apple.com
