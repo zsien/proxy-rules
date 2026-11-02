@@ -1,7 +1,3 @@
-cn.pool.ntp.org
-ntp.neu.edu.cn
-ntp.ntsc.ac.cn
-ntp.org.cn
 a2z.org.cn
 amazonaws.cn
 amazonaws.com.cn
@@ -28,6 +24,10 @@ amzndns-cn.biz
 amzndns-cn.cn
 amzndns-cn.com
 amzndns-cn.net
+cn.pool.ntp.org
+ntp.neu.edu.cn
+ntp.ntsc.ac.cn
+ntp.org.cn
 4008-517-517.cn
 mcd.cn
 mcdchina.net
