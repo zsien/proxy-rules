@@ -8,7 +8,7 @@ collector.github.com
 -.firebaselogging-pa.googleapis.com
 -.firebaselogging.googleapis.com
 -.update.crashlytics.com
--.dc.services.visualstudio.com
--.rt.services.visualstudio.com
 -.copilot-telemetry-service.githubusercontent.com
 -.copilot-telemetry.githubusercontent.com
+-.dc.services.visualstudio.com
+-.rt.services.visualstudio.com
