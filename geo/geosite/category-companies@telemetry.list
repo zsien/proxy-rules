@@ -1,4 +1,3 @@
-adobestats.io
 apptracer.ru
 metrics.viqeo.tv
 log.dzen.ru
@@ -8,13 +7,14 @@ aria.ms
 data.microsoft.com
 telemetry.microsoft.com
 nelreports.net
-in.applicationinsights.azure.com
 cafe.github.com
 collector.github.com
 browser.events.data.msn.cn
 browser.events.data.msn.com
+in.applicationinsights.azure.com
 analytics.vpc.duolingo.com
 metrics.duolingo.com
+adobestats.io
 appmetrica.yandex.com
 appmetrica.yandex.net
 appmetrica.yandex.ru
@@ -30,7 +30,6 @@ yandex-metrica.ru
 yandexmetrica.com
 -.sentry.mindbox.ru
 -.sentry.popmechanic.ru
--.sentry.iptv.rt.ru
 -.sentry-ng.g.smailru.net
 -.srch-telemeter10.g.smailru.net
 -.sentry.dev-my.com
@@ -42,13 +41,12 @@ yandexmetrica.com
 -.stats.rustore.ru
 -.stats.telega.info
 -.stats.vk-portal.net
--.dc.applicationinsights.azure.com
--.live.applicationinsights.azure.com
 -.copilot-telemetry-service.githubusercontent.com
 -.copilot-telemetry.githubusercontent.com
 -.dc.services.visualstudio.com
 -.rt.services.visualstudio.com
--.sentry.hetzner.company
+-.dc.applicationinsights.azure.com
+-.live.applicationinsights.azure.com
 -.incoming.telemetry.mozilla.org
 -.incoming-telemetry.thunderbird.net
 -.crashlyticsreports-pa.googleapis.com
@@ -56,6 +54,8 @@ yandexmetrica.com
 -.firebaselogging-pa.googleapis.com
 -.firebaselogging.googleapis.com
 -.update.crashlytics.com
+-.sentry.hetzner.company
+-.sentry.iptv.rt.ru
 -.analytics.mobile.yandex.net
 -.log.strm.yandex.ru
 -.mc.yandex.com
